@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+  <div id= "app">
+    <!-- // allow user to type somthing there and  update my title depending on what the user inter  -->
+    <input type="text" v-on:input="changeTitle"><!-- adding directive --><!-- input event which is fired on every keystroke -->
+    <h1 v-once>{{ title }}</h1> 
+    <p>{{ title }} - <a v-bind:href="link">Google</a></p>
+    <p>{{ sayHello() }}</p>
+    <!-- v-html for render html code --> 
+    <p v-html = "finishedLink"></p>
+  </div>  
+  <script src="vue.js"></script>
+  <script type="text/javascript" src="app.js"></script>  
+  </body>
+</html>
+<!-- v:on => vuejs command --> 

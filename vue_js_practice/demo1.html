@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+  <!-- we want to output some text depending on another property -->   
+  <div id= "app">
+    <!-- with the help of methods -->
+      <!-- <button v-on:click="increase"> Click Me</button>
+      <button v-on:click="decrease"> Click Me</button> -->
+    <button v-on:click="counter++"> Click Me</button>
+    <button v-on:click="counter--"> Click Me</button>
+    <button v-on:click="secondCounter++">secondCounter</button> 
+    
+    <p>{{ counter }} | {{ secondCounter }}</p>
+    <p>Result: {{ result() }} | {{ output }}</p>
+   
+  </div>  
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script type="text/javascript" src="demo.js"></script>  
+  </body>
+</html>
+<!-- v:on => vuejs command --> 

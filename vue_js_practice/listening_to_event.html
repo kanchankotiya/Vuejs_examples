@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<div id="app1"> 
+  <button v-on:click="increase"> Click Me</button>
+  <p>{{ counter }}</p>
+
+  <!-- access coordinates where this click event happened -->
+  <!-- and getting event data from the event object -->
+  <p v-on:mousemove="updateCoordinates">
+    Coordinates: {{ x }} / {{ y }}
+    <!-- create dead spot dont access event on mousehover with the help of function -->
+   <!--  - <span v-on:mousemove="dummy">Dead Spot</span> -->
+    <!-- create dead spot dont access event on mousehover with the help of stop modifiers -->
+    - <span v-on:mousemove.stop="">Dead Spot</span>
+  </p>
+
+  <!-- pass our own argument with events --> 
+  <button v-on:click="increase(2)"> Click Me</button>
+  <!--   pass both our own argument and automatically generated event object --> 
+  <button v-on:click="increase(2, $event)"> Click Me</button>
+
+  <!-- listening key events -->
+  <!-- listening key events only when we hit enter key and add space when we hit space key -->
+  <input type="text" v-on:keyup.enterspace="alert">
+
+  <h2>example with js</h2>
+  <button v-on:click="counter++"> Click Me!!!!!!!!!!!</button>
+  <p>{{ counter * 2 > 10 ? 'Greater then 10' : 'smaller than 10'}}</p>
+</div>
+
+<!-- write js code in template -->
+
+<script src="vue.js"></script>
+<script type="text/javascript" src= "app1.js"></script>
+</body>
+</html>

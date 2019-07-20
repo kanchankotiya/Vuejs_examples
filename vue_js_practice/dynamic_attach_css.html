@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamc styling with css classes</title>
+  </head>
+  <body>
+    <div id="style">
+      <!-- dynamic styling with css classes using object -->
+      <div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
+      <div class="demo" :class="color"></div>
+
+      <!-- change color with the help od v-model property -->
+      <input type="" v-model="color">
+    </div>  
+  <script src="vue.js"></script>
+  <script type="text/javascript" src="dynamic_attach.js"></script> 
+  </body>
+</html>
+<style type="text/css">
+  .demo{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    display: inline-block;
+    margin: 10px;
+  }
+  .red{
+    background-color: red;
+  }
+  .green{
+    background-color: green;
+  }
+  .blue{
+    background-color: blue;
+  }
+</style>
