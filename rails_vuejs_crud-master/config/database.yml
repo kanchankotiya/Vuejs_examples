@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  password: 123456
+  database: rails_vue_dev
+  timeout: 5000
+test:
+  adapter: postgresql
+  database: rails_vue_test
+  password: 123456
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  database: rails_vue_pro
+  password: 123456
+  pool: 5
+  timeout: 5000

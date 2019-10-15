@@ -1,0 +1,46 @@
+<div class="container mt-5">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+
+  <p>
+    <strong>Gender:</strong>
+    <%= @user.gender %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @user.phone %>
+  </p>
+
+  <p>
+    <strong>Exp1:</strong>
+    <%= @user.exp1 %>
+  </p>
+
+  <p>
+    <strong>Exp2:</strong>
+    <%= @user.exp2 %>
+  </p>
+
+  <p>
+    <strong>Exp3:</strong>
+    <%= @user.exp3 %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @user.description %>
+  </p>
+
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
+</div>  

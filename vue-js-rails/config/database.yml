@@ -1,0 +1,19 @@
+default: &default
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  pool:     5
+  username: postgres
+  password: 123456
+
+development:
+  <<: *default
+  database: todo_dev
+
+test:
+  <<: *default
+  database: todo_test
+
+production:
+  <<: *default
+  database: todo_prod

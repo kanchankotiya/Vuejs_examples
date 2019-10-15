@@ -1,0 +1,97 @@
+<%= content_tag :div, id: 'user-form', class: 'columns', data: { user: user.to_json(except: [:created_at, :updated_at]) } do %>
+    <div class="row">
+      <div class="col-md">
+        <div id="form" class="card">
+          <div class="card-body">
+            <h2 class="title">create User</h2>
+            <div class="form-group">
+              <label>Name</label>
+              <input type='text' v-model="user.name" class="input form-control">
+            </div> 
+
+            <div class="form-group">
+              <label>Email:</label>
+              <input type='text' v-model="user.email" class="input form-control">
+            </div>  
+            
+            <div class="form-group">
+              <label>Phone Number:</label>
+              <input type='text' v-model="user.phone" class="input form-control">
+            </div>  
+           
+            <div class="form-group">
+              <label>Description</label>
+              <input type='text' v-model="user.description" class="input form-control">
+            </div>  
+            
+            <div class="form-group">
+              <label>Experience 1</label>
+              <textarea class="textarea form-control" v-model="user.exp1"></textarea>
+            </div>  
+            
+            <div class="form-group">
+              <label>Experience 2</label>
+              <textarea class="textarea form-control" v-model="user.exp2"></textarea>
+            </div>  
+        
+            <div class="form-group">
+              <label>Experience 3</label>
+              <textarea class="textarea form-control" v-model="user.exp3"></textarea>
+            </div>  
+            
+            <div class="form-group">
+              <label>Gender</label>
+              <select v-model="user.gender" class="select">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>  
+          </div>
+          <div class="card-footer">
+            <button @click="saveUser" class="button is-link">Create User</button>
+          </div>
+        </div>
+      </div>  
+      <div class="col-md">
+        <div id="cv-preview" class="card-content">
+          <h3 class="center title name">{{ user.name }}</h3>
+          <br>
+          <p class="center subtitle">
+            <b v-if="user.phone != null">
+            Phone Number:</b> {{ user.phone }}
+          </p> 
+          <p class="center subtitle">
+            <b v-if="user.email != null">Email:</b> {{ user.email }}<b v-if="user.gender != null">Gender:</b> {{ user.gender }}
+          </p>  
+     
+          <div class="description">
+            <b class="subtitle" v-if="user.description != null">Description:-</b>
+            <p>
+              {{ user.description }}
+            </p>
+          </div>
+        
+          <div class="exp">
+            <p class="subtitle" v-if="user.exp1 != null">Experience 1</p>
+            <p>
+              {{ user.exp1 }}
+            </p>
+          </div>
+        
+          <div class="exp">
+            <p class="subtitle" v-if="user.exp2 != null">Experience 2</p>
+            <p>
+              {{ user.exp2 }}
+            </p>
+          </div>
+        
+          <div class="exp">
+            <p class="subtitle" v-if="user.exp3 != null">Experience 3</p>
+            <p>
+              {{ user.exp3 }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
